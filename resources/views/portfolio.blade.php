@@ -35,7 +35,7 @@
             @foreach($projects as $project)
             <div class="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300">
                 <div class="relative overflow-hidden">
-                    <img src="{{ $project['image'] }}" alt="{{ $project['title'] }}" class="w-full h-52 object-cover group-hover:scale-110 transition duration-500">
+                    <img src="{{ $project['images'][0] }}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-indigo-900/20 group-hover:bg-transparent transition duration-500"></div>
                 </div>
                 <div class="p-8">

@@ -16,22 +16,34 @@ class PortfolioController extends Controller
 
         $projects = [
             [
-                'title' => 'Sistem Antrian RS',
-                'desc' => 'Aplikasi manajemen antrian pasien real-time.',
-                'tech' => ['Laravel 12', 'Tailwind', 'Livewire'],
-                'image' => 'https://via.placeholder.com/600x400'
+                'title' => 'Sistem Kasir R.Collection',
+                'desc' => 'Aplikasi manajemen bisnis Toko Jahit.',
+                'tech' => ['Java', 'MySQL', 'JavaFX'],
+                'images' => [
+                    'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=600',
+                    'https://images.unsplash.com/photo-1556742031-c696818a59ce?q=80&w=600',
+                    'https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=600',
+                ]
             ],
             [
-                'title' => 'E-Commerce Skincare',
-                'desc' => 'Platform penjualan produk kecantikan dengan integrasi payment gateway.',
+                'title' => 'E-Commerce KosHub',
+                'desc' => 'Platform pemasaran bisnis kos-kosan.',
                 'tech' => ['PHP', 'Bootstrap', 'MySQL'],
-                'image' => 'https://via.placeholder.com/600x400'
+                'images' => [
+                    'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600',
+                    'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=600',
+                    'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=600',
+                ]
             ],
             [
-                'title' => 'Portfolio API',
-                'desc' => 'RESTful API untuk manajemen data portofolio.',
-                'tech' => ['Laravel', 'Sanctum'],
-                'image' => 'https://via.placeholder.com/600x400'
+                'title' => 'Sistem Manajemen Proman',
+                'desc' => 'Sistem manajemen kehidupan sehari-hari.',
+                'tech' => ['Laravel', 'Livewire', 'MySQL'],
+                'images' => [
+                    'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=600',
+                    'https://images.unsplash.com/photo-1506784919141-93ad54563f8d?q=80&w=600',
+                    'https://images.unsplash.com/photo-1454165833267-028cc2402f9a?q=80&w=600',
+                ]
             ],
         ];
 
