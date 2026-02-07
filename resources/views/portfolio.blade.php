@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $profile['name'] }} | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
     </style>
 </head>
-<body class="bg-[#0f172a] text-slate-200"> <header class="h-screen flex flex-col justify-center items-center bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-slate-800 via-[#0f172a] to-[#0f172a]">
+
+<body class="bg-[#0f172a] text-slate-200">
+    <header class="h-screen flex flex-col justify-center items-center bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-slate-800 via-[#0f172a] to-[#0f172a]">
         <div class="text-center">
             <h1 class="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
                 {{ $profile['name'] }}
@@ -30,7 +36,7 @@
             <h2 class="text-3xl font-bold border-l-4 border-indigo-500 pl-4">Project Pilihan</h2>
             <div class="h-[1px] bg-slate-800 flex-grow ml-8"></div>
         </div>
-        
+
         <div class="grid md:grid-cols-3 gap-10">
             @foreach($projects as $project)
             <div class="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300">
@@ -43,9 +49,9 @@
                     <p class="text-slate-400 text-sm leading-relaxed mb-6">{{ $project['desc'] }}</p>
                     <div class="flex flex-wrap gap-2">
                         @foreach($project['tech'] as $tech)
-                            <span class="text-[10px] uppercase tracking-wider font-bold bg-slate-900 text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-full">
-                                {{ $tech }}
-                            </span>
+                        <span class="text-[10px] uppercase tracking-wider font-bold bg-slate-900 text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-full">
+                            {{ $tech }}
+                        </span>
                         @endforeach
                     </div>
                 </div>
@@ -55,11 +61,17 @@
     </section>
 
     <footer class="py-16 text-center border-t border-slate-800">
+        <div class="flex justify-center gap-6 mb-8 text-xl text-slate-500">
+            <a href="{{ $profile['github'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-github"></i></a>
+            <a href="{{ $profile['linkedin'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="{{ $profile['instagram'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="r.iqbal.maulana.ibrahim@gmail.com" class="hover:text-indigo-400 transition"><i class="fa-solid fa-envelope"></i></a>
+        </div>
         <p class="text-slate-500 text-sm">
-            © {{ date('Y') }} <span class="text-slate-300">{{ $profile['name'] }}</span>. 
-            Built with <span class="text-indigo-500">Laravel 12</span> & Tailwind.
+            © {{ date('Y') }} <span class="text-slate-300">{{ $profile['name'] }}</span>. Built with Laravel 12.
         </p>
     </footer>
 
 </body>
+
 </html>

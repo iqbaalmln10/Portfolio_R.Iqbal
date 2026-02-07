@@ -12,6 +12,9 @@ class PortfolioController extends Controller
             'name' => 'R.Iqbal Maulana Ibrahim',
             'role' => 'Fullstack Developer',
             'bio' => 'Membangun solusi digital yang elegan dan fungsional.',
+            'github' => 'https://github.com/iqbaalmln10',
+            'linkedin' => 'https://linkedin.com/in/Raden Iqbal',
+            'instagram' => 'https://instagram.com/iqbaalmln._',
         ];
 
         $projects = [
