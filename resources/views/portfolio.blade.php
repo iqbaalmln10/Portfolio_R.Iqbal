@@ -61,14 +61,31 @@
     </section>
 
     <footer class="py-16 text-center border-t border-slate-800">
-        <div class="flex justify-center gap-6 mb-8 text-xl text-slate-500">
-            <a href="{{ $profile['github'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-github"></i></a>
-            <a href="{{ $profile['linkedin'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="{{ $profile['instagram'] }}" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-instagram"></i></a>
-            <a href="r.iqbal.maulana.ibrahim@gmail.com" class="hover:text-indigo-400 transition"><i class="fa-solid fa-envelope"></i></a>
+        <div class="flex justify-center gap-8 mb-8 text-2xl text-slate-500">
+            <a href="{{ $profile['github'] }}" target="_blank"
+                class="hover:text-white transition-all duration-300 transform hover:scale-110">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="{{ $profile['linkedin'] }}" target="_blank"
+                class="hover:text-[#0077B5] transition-all duration-300 transform hover:scale-110">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="{{ $profile['instagram'] }}" target="_blank"
+                class="hover:text-[#E4405F] transition-all duration-300 transform hover:scale-110">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="mailto:r.iqbal.maulana.ibrahim@gmail.com"
+                class="hover:text-emerald-400 transition-all duration-300 transform hover:scale-110">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
-        <p class="text-slate-500 text-sm">
-            © {{ date('Y') }} <span class="text-slate-300">{{ $profile['name'] }}</span>. Built with Laravel 12.
+
+        <p class="text-slate-500 text-sm tracking-wide">
+            © {{ date('Y') }} <span class="text-slate-300 font-medium">{{ $profile['name'] }}</span>.
+            Membangun dengan <span class="text-indigo-500">Laravel 12</span> & ❤️
         </p>
     </footer>
 
