@@ -39,20 +39,24 @@
 
         <div class="grid md:grid-cols-3 gap-10">
             @foreach($projects as $project)
-            <div class="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300">
+            <div class="group bg-slate-800/50 ...">
                 <div class="relative overflow-hidden">
-                    <img src="{{ $project['images'][0] }}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-indigo-900/20 group-hover:bg-transparent transition duration-500"></div>
+                    {{-- Gunakan $project sesuai nama di foreach --}}
+                    <img src="{{ $project['images'][0] }}" class="...">
                 </div>
                 <div class="p-8">
-                    <h3 class="font-bold text-xl mb-3 text-white group-hover:text-indigo-400 transition">{{ $project['title'] }}</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">{{ $project['desc'] }}</p>
+                    <h3 class="...">{{ $project['title'] }}</h3>
+                    <p class="...">{{ $project['desc'] }}</p>
+
                     <div class="flex flex-wrap gap-2">
                         @foreach($project['tech'] as $tech)
-                        <span class="text-[10px] uppercase tracking-wider font-bold bg-slate-900 text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-full">
-                            {{ $tech }}
-                        </span>
+                        <span class="...">{{ $tech }}</span>
                         @endforeach
+
+                        {{-- Link detail taruh di luar loop tech agar tidak muncul berkali-kali --}}
+                        <a href="{{ route('project.show', $project['id']) }}" class="ml-auto text-indigo-400">
+                            lihat detail <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
